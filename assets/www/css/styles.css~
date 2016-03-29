@@ -1,0 +1,17 @@
+/*  anything here is optional only being used for styling the cards */
+.custom-item {
+  width: 50%;
+  float: left;
+  height: 150px;
+}
+
+/* Style every even child */
+.custom-item:nth-child(even) {
+  background-color: #e5e5e5;
+}
+
+/* Style every odd child */
+.custom-item:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+

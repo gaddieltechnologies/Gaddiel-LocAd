@@ -1,0 +1,28 @@
+<ion-view style="" title="Stationery">
+
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+   	<ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>    
+      
+        
+	  <div class="list" ng-repeat="xs in namess|orderBy:'shopname'">
+	
+		  <div class="item" >
+		    <h2>{{xs.shopname}}</h2>   
+		  </div>
+	
+		  <div class="item item-body" style="padding: 0px;">
+		    <img class="full-image" src="data:image/jpeg;base64,{{xs.image}}" > 
+		    
+		     <i class="icon ion-ios-timer-outline assertive" style="padding-left: 5px;"></i>
+		      {{xs.remarks}}</br>
+		      <i class="icon ion-ios-navigate-outline assertive" style="padding-left: 5px;"></i>
+		       {{xs.location}}	
+		  </div>
+	
+	</div>
+<p></p>
+    </ion-content>
+</ion-view>

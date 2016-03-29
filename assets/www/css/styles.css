@@ -1,0 +1,14 @@
+/* Empty. Add your own CSS if you like */
+#fhm_page .scroll,
+.fhm_row {
+  /* position: absolute; */
+  height: 33.3%;
+  left:0;
+  right:0;
+  clear:both;
+}
+.fhm_item {
+  height: 50%;
+  width:50%;
+  float:left;
+}

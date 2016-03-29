@@ -1,0 +1,104 @@
+<ion-view style="" title="LocalizedAd">
+  <ion-pane ng-controller="ecomCtrl">
+    <ion-content class="has-header has-footer" overflow-scroll="true" padding="true">
+      <form style="" class="list">
+           
+            <label class="item item-input item-select">
+			    <div class="input-label">		     
+              
+                <input placeholder="Category" type="search">
+           
+			    </div>
+			    <select>
+			      <option>Beach Resorts</option>
+			      <option selected>Stationery</option>
+			      <option>Gift Shop</option>
+			    </select>
+			 </label>
+        </form> 
+      
+	<hscroller>
+        <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>
+      </hscroller>
+
+ <div class="item item-divider">Categories</div>
+	<ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher> 
+    
+      <div class="fhm_container">
+        <div class="fhm_row">
+        <a ui-sref="coffeeShop">
+          <div class="fhm_item">
+           <div class="item item-body" style="padding: 35px;" >
+                <div style="text-align: center;">
+                    <img src="img/beach-umbrella.png" height="33.3%" width="60%"></br>
+                     <label>Beach Resorts</label>
+                </div>
+            </div>            
+          </div>
+          </a>
+           <a ui-sref="pharmacy">
+          <div class="fhm_item">          
+           <div class="item item-body" style="padding: 35px;">
+                <div style="text-align: center;">
+                    <img src="img/sc.png" height="33.3%" width="60%">
+                    </br>
+                     <label>Stationery</label>
+                </div>
+            </div>            
+          </div> 
+          </a>         
+        </div>
+        <div class="fhm_row">
+        <a ui-sref="coffeeShop">
+          <div class="fhm_item">
+            <div class="item item-body"  style="padding: 0px;">
+                <div style="text-align: center;" >
+                    <img src="img/br.png" height="33.3%" width="100%">                  
+                </div>
+            </div>
+          </div>
+            </a>
+            <a ui-sref="pharmacy">
+          <div class="fhm_item">
+           <div class="item item-body" style="padding: 0px;">
+                <div style="text-align: center;">
+                    <img src="img/sn.png" height="33.3%" width="100%">                  
+                </div>
+            </div>
+          </div>
+          </a>
+        </div>
+        
+        <div class="fhm_row">
+        <a ui-sref="coffeeShop">
+          <div class="fhm_item" >
+            <div class="item item-body" style="background-color: #387ef5; ">
+                <div style="text-align: center;" style="padding: 35px;">
+                    <img src="img/beach-umbrella2.png" height="33.3%" width="60%">
+                    </br>
+                     <label style="color:#FFFFFF;">Beach Resorts</label>
+                </div>
+            </div>
+          </div>
+            </a>
+            <a ui-sref="pharmacy">
+          <div class="fhm_item">
+            <div class="item item-body" style="background-color: #387ef5; ">
+                <div style="text-align: center;" style="padding: 35px;">
+                    <img src="img/stationery.png" height="33.3%" width="60%">
+                    </br>
+                     <label style="color:#FFFFFF;">Stationery</label>
+                </div>
+            </div>
+          </div>
+          </a>
+        </div>
+        
+      </div>
+    </ion-content>
+  </ion-pane>
+
+</ion-view>
